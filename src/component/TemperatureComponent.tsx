@@ -1,9 +1,9 @@
 import  React, { Component } from 'react';
 
-class TemperatureComponent extends Component  {
+class TemperatureComponent extends React.Component  {
     render() {
         return (
-            <h1> Hello React, from {this.props.name} </h1>
+            <h1> Hello React, from {this.props.children} </h1>
         );
     }
 }
