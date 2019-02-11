@@ -13,7 +13,8 @@
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
     "react-scripts": "2.1.3",
-    "typescript": "^3.3.3"
+    "typescript": "^3.3.3",
+    "react-apollo": "latest"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -29,5 +30,9 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "graphql-code-generator": "^0.16.1",
+    "graphql-codegen-typescript-react-apollo-template": "^0.16.1"
+  }
 }
