@@ -36,4 +36,4 @@ jobs:
           command: sudo apt-get install -y rsync awscli
       - run:
           name: Deploy to S3
-          command: aws s3 sync build/ s3://slushie --delete
+          command: if [ $CIRCLE_BRANCH == "develop" ]; then aws s3 sync build/ s3://slushie-dev --delete ; else aws s3 sync build/ s3://slushie fi
