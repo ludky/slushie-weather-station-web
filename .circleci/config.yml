@@ -17,7 +17,7 @@ jobs:
           keys:
             - yarn-packages-{{ checksum "yarn.lock" }}
       - run:
-          name: Install Dependencies
+          name: Install node dependencies
           command: yarn install --frozen-lockfile
       - save_cache:
           name: Save Yarn Package Cache
@@ -27,6 +27,12 @@ jobs:
       - run:
           name: Install AWS CLI
           command: sudo apt-get install -y rsync awscli
+      - run:
+          name: Build static files
+          command: yarn build
+      - run:
+          name: Deploy to S3
+          command: aws s3 sync build/ s3://slushie
 
       # run tests!
       - run: yarn test
