@@ -29,11 +29,11 @@ jobs:
           name: Run tests
           command: yarn test
       - run:
-          name: Install AWS CLI
-          command: sudo apt-get install
-      - run:
           name: Build static files
           command: yarn build
+      - run:
+          name: Install AWS CLI
+          command: sudo apt-get install -y rsync awscli
       - run:
           name: Deploy to S3
           command: aws s3 sync build/ s3://slushie --delete
