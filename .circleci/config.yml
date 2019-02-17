@@ -24,6 +24,10 @@ jobs:
           key: yarn-packages-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache/yarn
+      # run tests!
+      - run:
+          name: Run tests
+          command: yarn test
       - run:
           name: Install AWS CLI
           command: sudo apt-get install -y rsync awscli
@@ -32,7 +36,4 @@ jobs:
           command: yarn build
       - run:
           name: Deploy to S3
-          command: aws s3 sync build/ s3://slushie
-
-      # run tests!
-      - run: yarn test
+          command: aws s3 ls
