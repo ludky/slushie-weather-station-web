@@ -39,4 +39,4 @@ jobs:
           command: echo $CIRCLE_BRANCH
       - run:
           name: Deploy to S3
-          command: if [ $CIRCLE_BRANCH = "develop" ]; then aws s3 sync build/ s3://slushie-dev --delete ; else aws s3 sync build/ s3://slushie fi
+          command: if [ "$CIRCLE_BRANCH" = "develop" ]; then aws s3 sync build/ s3://slushie-dev --delete ; else aws s3 sync build/ s3://slushie fi
