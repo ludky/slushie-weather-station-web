@@ -30,7 +30,7 @@ jobs:
           command: yarn test
       - run:
           name: Install AWS CLI
-          command: sudo apt-get install -y rsync awscli
+          command: sudo apt-get install
       - run:
           name: Build static files
           command: yarn build
