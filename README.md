@@ -68,3 +68,6 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+### Secrets and API Keys
+Secrets and API keys are not stored in version control.  Create a file for the SLUSHIE_API_KEY called `secrets.env`

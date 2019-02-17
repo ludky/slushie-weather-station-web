@@ -63,3 +63,6 @@ typings/
 
 #IntelliJ configuration
 .idea/
+
+#Secrets
+secrets.env
