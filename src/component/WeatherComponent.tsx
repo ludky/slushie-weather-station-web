@@ -42,6 +42,7 @@ export default Weather(({ data: { loading, listSlushieWeatherModels, error } }) 
             <p>Temperature: {listSlushieWeatherModels != null ? listSlushieWeatherModels.items[0].temperature + " C": 'NO DATA'}</p>
             <p>Humidity: {listSlushieWeatherModels != null ? listSlushieWeatherModels.items[0].humidity + " %": 'NO DATA'}</p>
             <p>Datetime: {listSlushieWeatherModels != null ? listSlushieWeatherModels.items[0].datetime : 'NO DATA'}</p>
+            <p>More data</p>
         </div>
     )
 });
