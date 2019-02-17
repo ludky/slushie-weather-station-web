@@ -24,6 +24,9 @@ jobs:
           key: yarn-packages-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache/yarn
+      - run:
+          name: Install AWS CLI
+          command: sudo apt-get install -y rsync awscli
 
       # run tests!
       - run: yarn test
