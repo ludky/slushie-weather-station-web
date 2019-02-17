@@ -65,4 +65,4 @@ typings/
 .idea/
 
 #Secrets
-secrets.env
+.env
