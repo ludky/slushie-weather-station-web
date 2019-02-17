@@ -34,7 +34,7 @@ jobs:
       - run:
           name: Install AWS CLI
           command: sudo apt-get install -y rsync awscli
-    - run:
+      - run:
           name: Return variable
           command: echo $CIRCLE_BRANCH
       - run:
