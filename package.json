@@ -32,7 +32,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "graphql-code-generator": "^0.16.1",
+    "graphql-code-generator": "^0.18.2",
     "graphql-codegen-typescript-react-apollo-template": "^0.16.1"
   }
 }
